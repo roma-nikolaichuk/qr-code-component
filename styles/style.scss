@@ -1,0 +1,45 @@
+@import "./reset";
+@import "./mediaQueries";
+@import "./mixins";
+@import "./variables";
+
+body {
+  @include flex(center, center);
+  background: $light-gray;
+}
+
+.qr-code {
+  width: 320px;
+  padding: 1rem;
+  margin: 1rem 0;
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: 5px 5px 30px 10px hsla(220, 15%, 55%, 0.2);
+
+  &__image {
+    &-img {
+      width: 100%;
+      border-radius: 0.5rem;
+    }
+  }
+
+  &__content {
+    padding: 1.5rem 0.75rem;
+    font-family: $ff-outfit;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: $dark-blue;
+  }
+
+  &__description {
+    font-size: 15px;
+    font-weight: 400;
+    text-align: center;
+    color: $grayish-blue;
+  }
+}
